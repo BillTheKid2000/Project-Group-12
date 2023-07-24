@@ -1,5 +1,5 @@
 const apiKey = 'YOUR_API_KEY';
-const searchUrl = 'http://archive.org/wayback/available?url=';
+const searchUrl = 'https://archive.org/wayback/available?url=';
 
 // Get the input value from the textbox
 const inputTextbox = document.getElementById('urlInput');
@@ -26,12 +26,11 @@ function searchAndDisplayWebPages() {
       'Authorization': `LOW ${apiKey}`
     },
     success: function (response) {
-      // Check if the response contains an archived snapshot
       if (response && response.archived_snapshots && response.archived_snapshots.closest) {
         const closest = response.archived_snapshots.closest;
-        const snapshotUrl = closest.url;
-
-        // Display the snapshot of the current web page
+        let snapshotUrl = closest.url;
+        snapshotUrl = snapshotUrl.replace(/^http:/, 'https:');  // replace http with https
+    
         const iframe = document.createElement('iframe');
         iframe.src = snapshotUrl;
         currentWebPageBox.innerHTML = '';
@@ -40,6 +39,7 @@ function searchAndDisplayWebPages() {
         currentWebPageBox.innerHTML = 'No archived snapshots found for the current web page.';
       }
     },
+    
     error: function (error) {
       console.log('Error:', error);
     }
@@ -57,8 +57,9 @@ function searchAndDisplayWebPages() {
       // Check if the response contains an archived snapshot
       if (response && response.archived_snapshots && response.archived_snapshots.closest) {
         const closest = response.archived_snapshots.closest;
-        const snapshotUrl = closest.url;
-
+        let snapshotUrl = closest.url;
+        snapshotUrl = snapshotUrl.replace(/^http:/, 'https:');  // replace http with https
+    
         // Display the snapshot of the archived web page
         const iframe = document.createElement('iframe');
         iframe.src = snapshotUrl;
@@ -68,6 +69,7 @@ function searchAndDisplayWebPages() {
         archivedWebPageBox.innerHTML = 'No archived snapshots found for the archived web page.';
       }
     },
+    
     error: function (error) {
       console.log('Error:', error);
     }
