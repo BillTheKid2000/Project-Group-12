@@ -24,15 +24,67 @@
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="search.html">Custom Search</a></li>
-      <li><a href="#">Login</a></li>
-      <li><a href="#">Sign up</a></li>
+      <li><a href="#" onclick="openModal('signinModal')">Sign In</a></li>
+      <li><a href="#" onclick="openModal('signupModal')">Sign Up</a></li>
     </ul>
   </div>
+  <!-- Sign-in Modal -->
+<div id="signinModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('signinModal')">&times;</span>
+    <h2>Sign In</h2>
+    <form id="login-form">
+      <label for="signin-email">Email:</label>
+      <input type="email" id="signin-email" name="email" required>
+      <br><br>
+      <label for="signin-password">Password:</label>
+      <input type="password" id="signin-password" name="password" required>
+      <br><br>
+      <button type="submit">Sign In</button>
+    </form>
+  </div>
+</div>
 
-  <div class="display-box" id="currentWebPage"></div>
-  <div class="display-box" id="archivedWebPage"></div>
+<!-- Sign-up Modal -->
+<div id="signupModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('signupModal')">&times;</span>
+    <h2>Sign Up</h2>
+    <form id="signup-form">
+      <label for="signup-email">Email:</label>
+      <input type="email" id="signup-email" name="email" required>
+      <br><br>
+      <label for="signup-password">Password:</label>
+      <input type="password" id="signup-password" name="password" required>
+      <br><br>
+      <button type="submit">Sign Up</button>
+    </form>
+  </div>
+</div>
 
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="facebook.js"></script>
+<div class = "bothboxes">
+  <div class = "current-box">
+    <h2>Current</h2>
+    <div class="display-box" id="currentWebPage">
+    </div>
+  </div>
+  <div class = "archive-box">
+    <h2>Ten Years Ago</h2>
+    <div class="display-box" id="archivedWebPage">
+    </div>
+  </div>
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-analytics.js"></script>
+<script src="config.js"></script>
+<script src="auth.js"></script>
+<script src="script.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="facebook.js"></script>
+</body>
+</html>
 </body>
 </html>

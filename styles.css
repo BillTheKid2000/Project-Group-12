@@ -1,19 +1,45 @@
-body {background-color: #333;}
+body {
+  background-color: #333;
+  font-family: 'Roboto', sans-serif; /* Example of a Google Font. You should import the font at the top of your CSS or in your HTML */
+  color: #fff;
+}
+
 .top-nav {
   background-color: #000;
   color: #fff;
-  padding: 10px;
+  padding: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-radius: 10px;
+  margin-bottom: 20px;
 }
 
 .top-nav h1 {
   margin: 0;
+  font-size: 2em;
 }
 
-/* Modal styles */
+.top-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.top-nav ul li {
+  margin-left: 20px;
+}
+
+.top-nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.top-nav ul li a:hover {
+  color: #ddd;
+}
+
 .modal {
   display: none;
   position: fixed;
@@ -27,6 +53,8 @@ body {background-color: #333;}
 }
 
 .modal-content {
+  color:#000;
+  text-align:left;
   background-color: #fefefe;
   margin: 15% auto;
   padding: 20px;
@@ -47,4 +75,37 @@ body {background-color: #333;}
   color: black;
   text-decoration: none;
   cursor: pointer;
+}
+
+table {
+  margin: auto;
+}
+
+td {
+  padding: 20px;
+}
+
+img {
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px #000;
+}
+.icon-table {
+  text-align:center;
+}
+
+.searchbar {
+  text-align:center;
+}
+
+.bothboxes {
+  display:flex;
+  justify-content:center;
+}
+
+.archive-box {
+  text-align:center;
+}
+
+.current-box {
+  text-align:center
 }
