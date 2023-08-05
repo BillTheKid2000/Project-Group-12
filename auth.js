@@ -1,40 +1,72 @@
-function signUp (email, password) {
-    auth.createUserWithEmailAndPassword(email, password).then(cred => {
-        console.log(cred.user);
-      alert(cred.user.email + ' has been registered');
-    // Close the signup modal
-      closeModal('signupModal');
-    // Clear the input fields
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvider, signOut } from "firebase/auth";
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyCBOu2NukPMhGXr46EO7aY8R-IIbReW31c",
+  authDomain: "memoria-web-51384.firebaseapp.com",
+  projectId: "memoria-web-51384",
+  storageBucket: "memoria-web-51384.appspot.com",
+  messagingSenderId: "887978552785",
+  appId: "1:887978552785:web:bb074f05fef446a45544f0",
+  measurementId: "G-S7EL6RSHGE"
+};
+
+// Initialize Firebase
+initializeApp(firebaseConfig);
+
+// Get the auth instance
+const auth = getAuth();
+
+// Create a Google provider object
+const provider = new GoogleAuthProvider();
+
+function signUp(email, password) {
+  createUserWithEmailAndPassword(auth, email, password).then(cred => {
+    console.log(cred.user);
+    alert(cred.user.email + ' has been registered');
+    closeModal('signupModal');
     document.getElementById('signup-email').value = '';
     document.getElementById('signup-password').value = '';
-    });
-  }
-  
-  function login(email, password) {
-    auth.signInWithEmailAndPassword(email, password).then(cred => {
-        alert(cred.user.email + ' has logged in');
-        console.log(cred.user);
-    // Close the signin modal
-      closeModal('signinModal');
-    // Clear the input fields
+  });
+}
+
+function login(email, password) {
+  signInWithEmailAndPassword(auth, email, password).then(cred => {
+    alert(cred.user.email + ' has logged in');
+    console.log(cred.user);
+    closeModal('signinModal');
     document.getElementById('signin-email').value = '';
     document.getElementById('signin-password').value = '';
-    });
-  }
-  
-  // Adding event listener for sign-up form submission
-  document.getElementById('signup-form').addEventListener('submit', function(event) {
-    event.preventDefault();
-    var email = document.getElementById('signup-email').value;
-    var password = document.getElementById('signup-password').value;
-    signUp(email, password);
   });
-  
-  // Adding event listener for login form submission
-  document.getElementById('login-form').addEventListener('submit', function(event) {
-    event.preventDefault();
-    var email = document.getElementById('signin-email').value;
-    var password = document.getElementById('signin-password').value;
-    login(email, password);
+}
+
+// Sign in with Google
+function signInWithGoogle() {
+  signInWithPopup(auth, provider).then((result) => {
+    const token = result.credential.accessToken;
+    const user = result.user;
+  }).catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    const email = error.email;
+    const credential = GoogleAuthProvider.credentialFromError(error);
   });
-  
+}
+
+document.getElementById('signup-form').addEventListener('submit', function(event) {
+  event.preventDefault();
+  var email = document.getElementById('signup-email').value;
+  var password = document.getElementById('signup-password').value;
+  signUp(email, password);
+});
+
+document.getElementById('login-form').addEventListener('submit', function(event) {
+  event.preventDefault();
+  var email = document.getElementById('signin-email').value;
+  var password = document.getElementById('signin-password').value;
+  login(email, password);
+});
+
+document.getElementById('google-signin-button').addEventListener('click', signInWithGoogle);
