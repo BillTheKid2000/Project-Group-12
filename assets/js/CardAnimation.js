@@ -89,6 +89,9 @@ function searchAndDisplayWebPages() {
     
         const iframe = document.createElement('iframe');
         iframe.src = snapshotUrl;
+        iframe.style.width = '100%';
+        iframe.style.height = '100%';
+        iframe.style.border = '0'
         bottomCard.innerHTML = '';
         bottomCard.appendChild(iframe);
       } else {
@@ -113,3 +116,11 @@ function getTimestampTenYearsAgo() {
 
 const searchButton = document.getElementById('searchButton');
 searchButton.addEventListener('click', searchAndDisplayWebPages);
+
+// Attach an event listener to trigger the search and display when the 'Enter' key is pressed
+inputTextbox.addEventListener('keypress', function (e) {
+  if (e.key === 'Enter') {
+    searchAndDisplayWebPages();
+  }
+});
+
