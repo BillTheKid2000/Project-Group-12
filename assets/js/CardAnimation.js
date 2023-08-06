@@ -89,6 +89,9 @@ function searchAndDisplayWebPages() {
     
         const iframe = document.createElement('iframe');
         iframe.src = snapshotUrl;
+        iframe.style.width = '100%';
+        iframe.style.height = '100%';
+        iframe.style.border = '0'
         bottomCard.innerHTML = '';
         bottomCard.appendChild(iframe);
       } else {

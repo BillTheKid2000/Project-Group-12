@@ -4,17 +4,21 @@
   height: 397.59px;
   flex-shrink: 0;
   transition: transform 800ms ease-in-out, z-index 0s;
+  
   /*padding-top: 62px;*/
   /*padding-left: 58px;*/
 }
 
 #card1 {
+  text-align:center;
   background-color: white;
   z-index: 2;
   border-radius: 20px;
+  
 }
 
 #card2 {
+  text-align:center;
   background-color: white;
   z-index: 1;
   border-radius: 20px;
@@ -32,15 +36,18 @@
   height: 397.59px;
   flex-shrink: 0;
   transition: transform 800ms ease-in-out, z-index 0s;
+  overflow: hidden;
 }
 
 #card1 {
+  text-align:center;
   background-color: white;
   z-index: 2;
-  border-radius: 20px;
+  border-radius: 20px; 
 }
 
 #card2 {
+  text-align:center;
   background-color: white;
   z-index: 1;
   border-radius: 20px;
