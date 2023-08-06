@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" style="background: #28231C;">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Memoria Web_07_31_23</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:400,600,800&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sora:400,600,800&amp;display=swap">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/card.css">
+    <link rel="stylesheet" href="assets/css/Navbar-Centered-Links-icons.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+<script src="https://www.gstatic.com/firebasejs/9.1.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.1.2/firebase-auth.js"></script>
+</head>
+
+<body style="margin-right: 80px;margin-left: 80px;height: 6780px;background: #28231C;">
+    <div class="container d-xl-flex mx-auto justify-content-xl-start" style="padding-left: 0px;padding-right: 0px;margin-left: 0px;margin-top: 20px;height: 104px;width: 1280px;">
+        <div class="text-nowrap font-weight-bold"><img src="assets/img/memoria%20web.svg">
+            <p style="font-size: 24px;font-family: Inter, sans-serif;letter-spacing: -0.06rem;color: white;margin-bottom: 0px;line-height: 29px;">Memoria Web</p>
+        </div>
+    </div>
+    <div class="container d-xl-flex mx-auto" style="width: 1280px;height: 460px;margin-right: 0px;margin-left: 0px;padding-right: 0px;padding-left: 0px;margin-top: 46px;">
+        <div class="row d-xl-flex" style="margin-right: 0px;margin-left: 0px;">
+            <div class="col-md-6" style="padding-left: 0px;margin-right: 0px;width: 600px;padding-right: 0px;">
+                <h1 class="display-1 font-weight-bold text-left" style="font-size: 96px;color: white;letter-spacing: -0.3rem;font-family: inter;line-height: 116px;">Time-Travel <span style="color:#F8F32B;">Online</span></h1>
+                <p>Memoria Web is your gateway to the digital past. With our advanced archival technology, we breathe new life into forgotten corners of the internet. Explore the evolution of online platforms, revisit old memories, or delve into initial website designs. We're not just preserving history; we're making it accessible. Step back in time with us today.</p>
+            </div>
+            <div class="col-md-6" style="margin-left:0px;width:600px;">
+                <div class="btn-group" role="group" style="padding-bottom:0px;padding-top:0px;margin-top:-84px;"><button class="btn btn-primary active" id="btn-card1" type="button" style="width:125px;height:42px;border-radius:40px 40px 40px 40px;margin-right:117px;margin-left:120px;font-family:sora;font-size:24px;letter-spacing:-1.44px;padding-top:0px;padding-bottom:0px;line-height:normal;border-width:0px;box-shadow:0px 4px 4px 2px rgb(0,0,0, 0.25);background:#530396;">-10 Years</button><button class="btn btn-primary" id="btn-card2" type="button" style="border-radius:40px 40px 40px 40px;width:125px;height:42px;font-size:24px;line-height:normal;letter-spacing:-1.44px;font-family:sora;border-width:0px;box-shadow:0px 4px 4px 2px rgb(0,0,0, 0.25);background:#530396;">Today</button></div>
+                <div class="card" id="card1" style="box-shadow:4px 4px 14px rgba(0,0,0,0.25);"><img class="card-img-top w-100 d-block card-img-top w-100" src="assets/img/Google-10yr.png" alt="Google 10 year image" style="width:100%;height:100%;object-fit:contain;"></div>
+                <div class="card" id="card2" style="box-shadow:4px 4px 14px rgba(0,0,0,0.25);"><img class="card-img-top w-100 d-block card-img-top w-100" src="assets/img/Google-Today.png"></div>
+                <div class="form-group d-xl-flex justify-content-xl-start InputGroup">
+                    <div class="input-group" style="border-radius:0px;border-width:1px;">
+                        <div class="input-group-prepend" style="border-top-left-radius:14px;border-bottom-left-radius:14px;"></div><input class="form-control form-control form-control" type="url" id="urlInput" placeholder="Enter the URL you’d like to see" style="border-radius:0x;background:#3B3B3B;border-top-left-radius:14px;border-bottom-left-radius:14px;color:white;text-align:center;border-width:1px;border-color:#525252;">
+                        <div class="input-group-append"><button class="btn btn-primary" id="searchButton" type="button" style="border-top-right-radius: 14px;border-bottom-right-radius: 14px;background: #3B3B3B;width: 48px;border-width: 1px;border-color: #525252;"><i class="fas fa-search"></i></button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-light navbar-expand-md fixed-bottom mx-auto py-3" style="margin-top: 0px;padding-bottom: 0px;margin-bottom: 20px;width: 900px;background: #000000;border-radius: 40px;height: 80px;">
+        <div class="container-fluid"><a class="navbar-brand d-flex align-items-center" href="#" style="width: 80px;height: 66px;border-radius: 40px;background: rgba(98,98,116,0.5);padding-left: 0px;padding-right: 0px;margin-left: -24px;"><span class="d-flex justify-content-center align-items-center bs-icon-lg bs-icon-rounded bs-icon-primary mr-2 bs-icon" style="background: rgba(0,123,255,0);width: 80px;height: 70px;margin-right: 24px;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-search">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"></path>
+                    </svg></span></a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-3"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-3" style="color: rgb(255,255,255);">
+                <ul class="navbar-nav d-xl-flex flex-fill mx-auto justify-content-xl-center">
+                    <li class="nav-item" style="margin-right: 0px;padding-right: 90px;"><a class="nav-link active" href="#" style="color: rgba(255,255,255,0.9);font-family: sora;font-size: 24px;">Benefits</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" style="color: rgb(255,255,255);padding-right: 90px;">Recent Websites</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" style="color: rgb(255,255,255);">FAQs</a></li>
+                </ul><a class="btn btn-primary d-xl-flex justify-content-xl-center align-items-xl-center" role="button" id="google-login-button" href="#" style="width: 100px;height: 66px;background: rgba(98,98,116,0.5);border-radius: 40px;margin-left: 0px;padding-left: 22px;padding-right: 21px;margin-right: -22px;border-width: 0px;">Login</a>
+            </div>
+        </div>
+    </nav>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/auth.js"></script>
+    <script src="assets/js/CardAnimation.js"></script>
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/your_script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+.container-w {
+}
+
+p {
+  font-family: 'Sora';
+  font-size: 24px;
+  color: white;
+  letter-spacing: -0.06rem;
+  line-height: 125%;
+}
+
+div {
+}
+
+.InputGroup {
+  margin-top: 470px;
+  width: 500px;
+  border-radius: 14px;
+  margin-left: 34px;
+  border-width: 1px;
+  border-color: rgb(255,255,255);
+}
+
