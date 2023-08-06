@@ -113,3 +113,11 @@ function getTimestampTenYearsAgo() {
 
 const searchButton = document.getElementById('searchButton');
 searchButton.addEventListener('click', searchAndDisplayWebPages);
+
+// Attach an event listener to trigger the search and display when the 'Enter' key is pressed
+inputTextbox.addEventListener('keypress', function (e) {
+  if (e.key === 'Enter') {
+    searchAndDisplayWebPages();
+  }
+});
+
