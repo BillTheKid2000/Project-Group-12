@@ -4,19 +4,30 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Memoria Web_07_31_23</title>
+    <title>Memoria Web</title>
+    <link rel="canonical" href="https://www.memoriaweb.com/">
+    <meta property="og:url" content="https://www.memoriaweb.com/">
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "WebSite",
+            "name": "Memoria Web",
+            "url": "https://www.memoriaweb.com"
+        }
+    </script>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:400,600,800&amp;display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sora:400,600,800&amp;display=swap">
     <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
     <link rel="stylesheet" href="assets/css/card.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
     <link rel="stylesheet" href="assets/css/Navbar-Centered-Links-icons.css">
     <link rel="stylesheet" href="assets/css/styles.css">
 <script src="https://www.gstatic.com/firebasejs/9.1.2/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/9.1.2/firebase-auth.js"></script>
 </head>
 
-<body style="margin-right: 80px;margin-left: 80px;height: 6780px;background: #28231C;">
+<body style="margin-right: 80px;margin-left: 80px;background: #28231C;">
     <div class="container d-xl-flex mx-auto justify-content-xl-start" style="padding-left: 0px;padding-right: 0px;margin-left: 0px;margin-top: 20px;height: 104px;width: 1280px;">
         <div class="text-nowrap font-weight-bold"><img src="assets/img/memoria%20web.svg">
             <p style="font-size: 24px;font-family: Inter, sans-serif;letter-spacing: -0.06rem;color: white;margin-bottom: 0px;line-height: 29px;">Memoria Web</p>
@@ -29,9 +40,9 @@
                 <p>Memoria Web is your gateway to the digital past. With our advanced archival technology, we breathe new life into forgotten corners of the internet. Explore the evolution of online platforms, revisit old memories, or delve into initial website designs. We're not just preserving history; we're making it accessible. Step back in time with us today.</p>
             </div>
             <div class="col-md-6" style="margin-left:0px;width:600px;">
-                <div class="btn-group" role="group" style="padding-bottom:0px;padding-top:0px;margin-top:-84px;"><button class="btn btn-primary active" id="btn-card1" type="button" style="width:125px;height:42px;border-radius:40px 40px 40px 40px;margin-right:117px;margin-left:120px;font-family:sora;font-size:24px;letter-spacing:-1.44px;padding-top:0px;padding-bottom:0px;line-height:normal;border-width:0px;box-shadow:0px 4px 4px 2px rgb(0,0,0, 0.25);background:#530396;">Current</button><button class="btn btn-primary" id="btn-card2" type="button" style="border-radius:40px 40px 40px 40px;width:125px;height:42px;font-size:24px;line-height:normal;letter-spacing:-1.44px;font-family:sora;border-width:0px;box-shadow:0px 4px 4px 2px rgb(0,0,0, 0.25);background:#530396;">-10 Years</button></div>
-                <div class="card" id="card1" style="box-shadow:4px 4px 14px rgba(0,0,0,0.25);"><img class="card-img-top w-100 d-block card-img-top w-100" src="assets/img/Google-10yr.png" alt="Google 10 year image"></div>
-                <div class="card" id="card2" style="box-shadow:4px 4px 14px rgba(0,0,0,0.25);"><img class="card-img-top w-100 d-block card-img-top w-100" src="assets/img/Google-Today.png" style="width:100%;height:100%;object-fit:contain;"></div>
+                <div class="btn-group" role="group" style="padding-bottom:0px;padding-top:0px;margin-top:-84px;"><button class="btn btn-primary active" id="btn-card1" type="button" style="width:125px;height:42px;border-radius:40px 40px 40px 40px;margin-right:117px;margin-left:120px;font-family:sora;font-size:24px;letter-spacing:-1.44px;padding-top:0px;padding-bottom:0px;line-height:normal;border-width:0px;box-shadow:0px 4px 4px 2px rgb(0,0,0, 0.25);background:#530396;">-10 Years</button><button class="btn btn-primary" id="btn-card2" type="button" style="border-radius:40px 40px 40px 40px;width:125px;height:42px;font-size:24px;line-height:normal;letter-spacing:-1.44px;font-family:sora;border-width:0px;box-shadow:0px 4px 4px 2px rgb(0,0,0, 0.25);background:#530396;">Today</button></div>
+                <div class="card" id="card1" style="box-shadow:4px 4px 14px rgba(0,0,0,0.25);"><img class="card-img-top w-100 d-block card-img-top w-100" src="assets/img/Google-10yr.png" alt="Google 10 year image" style="width:100%;height:100%;object-fit:contain;"></div>
+                <div class="card" id="card2" style="box-shadow:4px 4px 14px rgba(0,0,0,0.25);"><img class="card-img-top w-100 d-block card-img-top w-100" src="assets/img/Google-Today.png"></div>
                 <div class="form-group d-xl-flex justify-content-xl-start InputGroup">
                     <div class="input-group" style="border-radius:0px;border-width:1px;">
                         <div class="input-group-prepend" style="border-top-left-radius:14px;border-bottom-left-radius:14px;"></div><input class="form-control form-control form-control" type="url" id="urlInput" placeholder="Enter the URL you’d like to see" style="border-radius:0x;background:#3B3B3B;border-top-left-radius:14px;border-bottom-left-radius:14px;color:white;text-align:center;border-width:1px;border-color:#525252;">
@@ -41,6 +52,149 @@
             </div>
         </div>
     </div>
+    <div class="container" style="width: 1280px;height: 912px;margin-top: 328px;">
+        <div class="row">
+            <div class="col-md-6" style="padding-right: 0px;padding-left: 0px;">
+                <h2 style="color: rgb(255,255,255);font-family: sora;font-size: 48px;line-height: 125%;letter-spacing: -0.06rem;">Relive Nostalgia</h2>
+                <p><br>Dive back into your favorite online communities. Experience nostalgia at your fingertips!</p>
+            </div>
+            <div class="col-md-6 d-xl-flex justify-content-xl-center" style="padding-right: 0px;padding-left: 40px;width: 600px;height: 300px;"><img style="width: 300px;height: 300px;" src="assets/img/soon-3.png"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 d-xl-flex justify-content-xl-center" style="padding-right: 40px;padding-left: 0px;width: 600px;height: 300px;"><img style="width: 300px;height: 300px;margin-top: -30px;" src="assets/img/page-not-found-error-404-2.png"></div>
+            <div class="col-md-6" style="padding-right: 0px;padding-left: 0px;">
+                <h2 style="color: rgb(255,255,255);font-family: sora;font-size: 48px;line-height: 125%;letter-spacing: -0.06rem;"><br>Unlock Lost Information</h2>
+                <p><br>Break through dead links to unearth data from extinct websites. Conquer your research with ease!</p>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 20px;">
+            <div class="col-md-6" style="padding-right: 0px;padding-left: 0px;">
+                <h2 style="color: rgb(255,255,255);font-family: sora;font-size: 48px;line-height: 125%;letter-spacing: -0.06rem;">Study Evolution for Software Engineers</h2>
+                <p><br>Leverage our archives to understand system evolution. Inform your development strategies with past insights! Dive into Memoria Web, where the past powers the future!</p>
+            </div>
+            <div class="col-md-6 d-xl-flex justify-content-xl-center" style="padding-right: 0px;padding-left: 40px;width: 600px;height: 300px;"><img style="width: 300px;height: 300px;" src="assets/img/researchers.png"></div>
+        </div>
+    </div>
+    <div class="container" style="padding-left: 0px;padding-right: 0px;height: 175px;width: 896px;padding-top: 0px;margin-top: 25px;">
+        <div class="row d-xl-flex">
+            <div class="col" style="padding-right: 0px;padding-left: 0px;text-align: center;">
+                <h2 class="d-xl-flex mx-auto justify-content-xl-center" style="color: rgb(255,255,255);font-family: sora;font-size: 48px;line-height: 125%;letter-spacing: -2.88px;text-align: center;width: 863px;">Millions run on Memoria Web every day</h2>
+                <h3 class="d-xl-flex justify-content-xl-center"><br>Powering the world’s best teams, from next-generation <br>students to established enterprises.</h3><a href="#" style="color: #a947ff;letter-spacing: -1.44px;">Read customer stories <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-arrow-right">
+                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
+                    </svg></a>
+            </div>
+        </div>
+    </div>
+    <div class="container text-center" style="width: 1160px;height: 456px;margin-top: 120px;padding-right: 0px;padding-left: 0px;"><img src="assets/img/Company%20Logos/Florida_Atlantic_Owls_logo%201.png" style="margin-left: 132px;"><img src="assets/img/Company%20Logos/Apple_Logo.png" style="margin-right: 60px;margin-left: 60px;"><img src="assets/img/Company%20Logos/Florida_State_Seminoles_Alternate_Logo%201.png" style="margin-right:  238px;"><img src="assets/img/Company%20Logos/Netflix_logo.png" style="margin-right: 49px;"><img src="assets/img/Company%20Logos/UM_Logo.png"><img src="assets/img/Company%20Logos/Tesla_Logo.png" style="margin-left: 49px;"></div>
+    <div class="container" style="width: 1280px;height: 1942px;margin-top: 328px;">
+        <div class="row" style="height: 622px;margin-bottom: 40px;">
+            <div class="col-md-6" style="margin-left:0px;width:600px;">
+                <div class="btn-group" role="group" style="padding-bottom:0px;padding-top:0px;margin-top:-84px;"><button class="btn btn-primary active" id="btn-card-1" type="button" style="width:125px;height:42px;border-radius:40px 40px 40px 40px;margin-right:117px;margin-left:120px;font-family:sora;font-size:24px;letter-spacing:-1.44px;padding-top:0px;padding-bottom:0px;line-height:normal;border-width:0px;box-shadow:0px 4px 4px 2px rgb(0,0,0, 0.25);background:#530396;">-10 Years</button><button class="btn btn-primary" id="btn-card-2" type="button" style="border-radius:40px 40px 40px 40px;width:125px;height:42px;font-size:24px;line-height:normal;letter-spacing:-1.44px;font-family:sora;border-width:0px;box-shadow:0px 4px 4px 2px rgb(0,0,0, 0.25);background:#530396;">Today</button></div>
+                <div class="card" id="card-1" style="box-shadow:4px 4px 14px rgba(0,0,0,0.25);"><img class="card-img-top w-100 d-block card-img-top w-100" src="assets/img/B&A%20Photos/Youtube-Today.png" alt="Google 10 year image" style="width:100%;height:100%;object-fit:contain;"></div>
+                <div class="card" id="card-2" style="box-shadow:4px 4px 14px rgba(0,0,0,0.25);"><img class="card-img-top w-100 d-block card-img-top w-100" src="assets/img/B&A%20Photos/Youtube-10yr.png"></div>
+                <div class="form-group d-xl-flex justify-content-xl-start InputGroup">
+                    <div class="input-group" style="border-radius:0px;border-width:1px;">
+                        <div class="input-group-prepend" style="border-top-left-radius:14px;border-bottom-left-radius:14px;"></div><input class="form-control form-control form-control" type="url" id="urlInput-1" placeholder="https://www.youtube.com" style="border-radius:0x;background:#3B3B3B;border-top-left-radius:14px;border-bottom-left-radius:14px;color:white;text-align:center;border-width:1px;border-color:#525252;" disabled="">
+                        <div class="input-group-append"><button class="btn btn-primary" id="searchButton-1" type="button" style="border-top-right-radius: 14px;border-bottom-right-radius: 14px;background: #3B3B3B;width: 48px;border-width: 1px;border-color: #525252;"><i class="fas fa-search"></i></button></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 d-xl-flex m-auto justify-content-xl-center" style="padding-right: 0px;padding-left: 40px;width: 600px;"><img src="assets/img/Company%20Logos/Youtube_Logo.png"></div>
+        </div>
+        <div class="row" style="height: 622px;margin-bottom: 40px;">
+            <div class="col-md-6 d-xl-flex m-auto justify-content-xl-center" style="padding-right: 0px;padding-left: 40px;width: 600px;"><img src="assets/img/Company%20Logos/Nike_Logo.png"></div>
+            <div class="col-md-6" style="margin-left:0px;width:600px;">
+                <div class="btn-group" role="group" style="padding-bottom:0px;padding-top:0px;margin-top:-84px;"><button class="btn btn-primary active" id="btn-card-3" type="button" style="width:125px;height:42px;border-radius:40px 40px 40px 40px;margin-right:117px;margin-left:120px;font-family:sora;font-size:24px;letter-spacing:-1.44px;padding-top:0px;padding-bottom:0px;line-height:normal;border-width:0px;box-shadow:0px 4px 4px 2px rgb(0,0,0, 0.25);background:#530396;">-10 Years</button><button class="btn btn-primary" id="btn-card-4" type="button" style="border-radius:40px 40px 40px 40px;width:125px;height:42px;font-size:24px;line-height:normal;letter-spacing:-1.44px;font-family:sora;border-width:0px;box-shadow:0px 4px 4px 2px rgb(0,0,0, 0.25);background:#530396;">Today</button></div>
+                <div class="card" id="card-3" style="box-shadow:4px 4px 14px rgba(0,0,0,0.25);"><img class="card-img-top w-100 d-block card-img-top w-100" src="assets/img/B&A%20Photos/Youtube-Today.png" alt="Google 10 year image" style="width:100%;height:100%;object-fit:contain;"></div>
+                <div class="card" id="card-4" style="box-shadow:4px 4px 14px rgba(0,0,0,0.25);"><img class="card-img-top w-100 d-block card-img-top w-100" src="assets/img/B&A%20Photos/Youtube-10yr.png"></div>
+                <div class="form-group d-xl-flex justify-content-xl-start InputGroup">
+                    <div class="input-group" style="border-radius:0px;border-width:1px;">
+                        <div class="input-group-prepend" style="border-top-left-radius:14px;border-bottom-left-radius:14px;"></div><input class="form-control form-control form-control" type="url" id="urlInput-2" placeholder="https://www.nike.com" style="border-radius: 0x;background: #3B3B3B;border-top-left-radius: 14px;border-bottom-left-radius: 14px;color: white;text-align: center;border-width: 1px;border-color: #525252;font-size: 24px;" disabled="">
+                        <div class="input-group-append"><button class="btn btn-primary" id="searchButton-2" type="button" style="border-top-right-radius: 14px;border-bottom-right-radius: 14px;background: #3B3B3B;width: 48px;border-width: 1px;border-color: #525252;"><i class="fas fa-search"></i></button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" style="height: 622px;margin-bottom: 40px;">
+            <div class="col-md-6" style="margin-left:0px;width:600px;">
+                <div class="btn-group" role="group" style="padding-bottom:0px;padding-top:0px;margin-top:-84px;"><button class="btn btn-primary active" id="btn-card-5" type="button" style="width:125px;height:42px;border-radius:40px 40px 40px 40px;margin-right:117px;margin-left:120px;font-family:sora;font-size:24px;letter-spacing:-1.44px;padding-top:0px;padding-bottom:0px;line-height:normal;border-width:0px;box-shadow:0px 4px 4px 2px rgb(0,0,0, 0.25);background:#530396;">-10 Years</button><button class="btn btn-primary" id="btn-card-6" type="button" style="border-radius:40px 40px 40px 40px;width:125px;height:42px;font-size:24px;line-height:normal;letter-spacing:-1.44px;font-family:sora;border-width:0px;box-shadow:0px 4px 4px 2px rgb(0,0,0, 0.25);background:#530396;">Today</button></div>
+                <div class="card" id="card-5" style="box-shadow:4px 4px 14px rgba(0,0,0,0.25);"><img class="card-img-top w-100 d-block card-img-top w-100" src="assets/img/B&A%20Photos/Youtube-Today.png" alt="Google 10 year image" style="width:100%;height:100%;object-fit:contain;"></div>
+                <div class="card" id="card-6" style="box-shadow:4px 4px 14px rgba(0,0,0,0.25);"><img class="card-img-top w-100 d-block card-img-top w-100" src="assets/img/B&A%20Photos/Youtube-10yr.png"></div>
+                <div class="form-group d-xl-flex justify-content-xl-start InputGroup">
+                    <div class="input-group" style="border-radius:0px;border-width:1px;">
+                        <div class="input-group-prepend" style="border-top-left-radius:14px;border-bottom-left-radius:14px;"></div><input class="form-control form-control form-control" type="url" id="urlInput-3" placeholder="https://www.facebook.com" style="border-radius:0x;background:#3B3B3B;border-top-left-radius:14px;border-bottom-left-radius:14px;color:white;text-align:center;border-width:1px;border-color:#525252;" disabled="">
+                        <div class="input-group-append"><button class="btn btn-primary" id="searchButton-3" type="button" style="border-top-right-radius: 14px;border-bottom-right-radius: 14px;background: #3B3B3B;width: 48px;border-width: 1px;border-color: #525252;"><i class="fas fa-search"></i></button></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 d-xl-flex m-auto justify-content-xl-center" style="padding-right: 0px;padding-left: 40px;width: 600px;"><img src="assets/img/Company%20Logos/Facebook_Logo.png"></div>
+        </div>
+    </div>
+    <div class="container" style="width: 1000px;height: 1249px;">
+        <h1 class="d-xl-flex m-auto justify-content-xl-center" style="color: rgb(255,255,255);text-align: center;font-size: 60px;line-height: 76px;letter-spacing: -0.06rem;font-family: sora;font-weight: 600;width: 275px;height: 80px;">FAQs</h1>
+        <div role="tablist" id="accordion-1" style="margin-top:50px;border-style:none;border-color:rgba(33,37,41,0);transform:scale(1);opacity:1;backdrop-filter:opacity(1);">
+            <div class="card" style="height:75px;width:1000px;background:rgba(255,255,255,0);border-radius:10px;border-top-left-radius:0;border-top-right-radius:0;border-bottom-right-radius:40px;border-bottom-left-radius:40px;border-width:0px;border-bottom-width:0px;border-bottom-color:#9215ff;">
+                <div class="card-header" role="tab" style="border-width:0px;border-top-left-radius:0px;border-top-right-radius:0px;border-bottom-right-radius:0px;background:rgba(0,0,0,0);">
+                    <h5 class="mb-0" style="width:1000px;"><a data-toggle="collapse" aria-expanded="true" aria-controls="accordion-1 .item-1" href="#accordion-1 .item-1" style="width:1000px;">What is this platform all about?<svg class="bi bi-chevron-down" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewbox="0 0 16 16" style="margin-left:560px;"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg></a></h5>
+                </div>
+                <div class="collapse show item-1 show item-1" role="tabpanel" data-parent="#accordion-1">
+                    <div class="card-body">
+                        <p class="card-text" style="width:700px;">This is your gateway to the past of the World Wide Web. Discover forgotten web pages, early versions of social media sites, and nostalgic blog posts - we've captured it all.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="text-white bg-dark d-xl-flex m-auto justify-content-xl-center" style="height: 380px;background: rgba(25,25,34,0);border-bottom-color: rgba(255,255,255,0);">
+        <div class="container py-4 py-lg-5" style="background: #191922;">
+            <div class="row justify-content-center">
+                <div class="col-lg-3 text-center text-lg-left d-flex flex-column align-items-center order-first align-items-lg-start order-lg-last item social">
+                    <div class="font-weight-bold d-flex align-items-center mb-2"><span class="bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center bs-icon mr-2"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-bezier">
+                                <path fill-rule="evenodd" d="M0 10.5A1.5 1.5 0 0 1 1.5 9h1A1.5 1.5 0 0 1 4 10.5v1A1.5 1.5 0 0 1 2.5 13h-1A1.5 1.5 0 0 1 0 11.5v-1zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1zm10.5.5A1.5 1.5 0 0 1 13.5 9h1a1.5 1.5 0 0 1 1.5 1.5v1a1.5 1.5 0 0 1-1.5 1.5h-1a1.5 1.5 0 0 1-1.5-1.5v-1zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1zM6 4.5A1.5 1.5 0 0 1 7.5 3h1A1.5 1.5 0 0 1 10 4.5v1A1.5 1.5 0 0 1 8.5 7h-1A1.5 1.5 0 0 1 6 5.5v-1zM7.5 4a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1z"></path>
+                                <path d="M6 4.5H1.866a1 1 0 1 0 0 1h2.668A6.517 6.517 0 0 0 1.814 9H2.5c.123 0 .244.015.358.043a5.517 5.517 0 0 1 3.185-3.185A1.503 1.503 0 0 1 6 5.5v-1zm3.957 1.358A1.5 1.5 0 0 0 10 5.5v-1h4.134a1 1 0 1 1 0 1h-2.668a6.517 6.517 0 0 1 2.72 3.5H13.5c-.123 0-.243.015-.358.043a5.517 5.517 0 0 0-3.185-3.185z"></path>
+                            </svg></span><span>Brand</span></div>
+                    <p class="text-white-50 copyright">Sem eleifend donec molestie, integer quisque orci aliquam.</p>
+                </div>
+                <div class="col-sm-4 col-md-3 text-center text-lg-left d-flex flex-column item">
+                    <h3 class="font-weight-bold" style="font-size: 1rem;">Support</h3>
+                    <ul class="list-unstyled">
+                        <li><a class="text-white" href="#">Company</a></li>
+                        <li><a class="text-white" href="#">Team</a></li>
+                        <li><a class="text-white" href="#">Legacy</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-4 col-md-3 text-center text-lg-left d-flex flex-column item">
+                    <h5 class="font-weight-bold" style="/*font-size: 1rem;*/">Get in touch</h5>
+                    <ul class="list-unstyled">
+                        <li><a class="text-white" href="#" style="font-size: 24px;font-family: sora; font-weight: 200">Contact Us<br />admin@memoriaweb.info</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-4 col-md-3 text-center text-lg-left d-flex flex-column item">
+                    <h3 class="font-weight-bold" style="font-size: 1rem;">Company</h3>
+                    <ul class="list-unstyled">
+                        <li><a class="text-white" href="#">Job openings</a></li>
+                        <li><a class="text-white" href="#">Employee success</a></li>
+                        <li><a class="text-white" href="#">Benefits</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="d-flex justify-content-between pt-3" style="background: var(--bs-gray-100);">
+                <p class="mb-0">Copyright © 2023 Memoria Web, LLC </p>
+                <ul class="list-inline text-white-50 mb-0">
+                    <li class="list-inline-item"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-facebook">
+                            <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"></path>
+                        </svg></li>
+                    <li class="list-inline-item"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-twitter">
+                            <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"></path>
+                        </svg></li>
+                    <li class="list-inline-item"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-instagram">
+                            <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"></path>
+                        </svg></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
     <nav class="navbar navbar-light navbar-expand-md fixed-bottom mx-auto py-3" style="margin-top: 0px;padding-bottom: 0px;margin-bottom: 20px;width: 900px;background: #000000;border-radius: 40px;height: 80px;">
         <div class="container-fluid"><a class="navbar-brand d-flex align-items-center" href="#" style="width: 80px;height: 66px;border-radius: 40px;background: rgba(98,98,116,0.5);padding-left: 0px;padding-right: 0px;margin-left: -24px;"><span class="d-flex justify-content-center align-items-center bs-icon-lg bs-icon-rounded bs-icon-primary mr-2 bs-icon" style="background: rgba(0,123,255,0);width: 80px;height: 70px;margin-right: 24px;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-search">
                         <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"></path>

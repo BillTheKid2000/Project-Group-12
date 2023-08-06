@@ -21,3 +21,28 @@ div {
   border-color: rgb(255,255,255);
 }
 
+h3 {
+  font-size: 24px;
+  font-weight: lighter;
+  letter-spacing: -0.06rem;
+  color: white;
+}
+
+h2 {
+}
+
+h2 {
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 32px;
+  font-family: 'Inter';
+  letter-spacing: -0.06rem;
+  line-height: 125%;
+  font-weight: 600;
+}
+
+#urlInput-1 {
+}
+
