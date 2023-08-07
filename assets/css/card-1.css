@@ -1,0 +1,64 @@
+.card {
+  position: absolute;
+  width: 542.169px;
+  height: 397.59px;
+  flex-shrink: 0;
+  transition: transform 800ms ease-in-out, z-index 0s;
+  /*padding-top: 62px;*/
+  /*padding-left: 58px;*/
+}
+
+#card1 {
+  text-align: center;
+  background-color: white;
+  z-index: 2;
+  border-radius: 20px;
+}
+
+#card2 {
+  text-align: center;
+  background-color: white;
+  z-index: 1;
+  border-radius: 20px;
+  transform: translateX(20px) translateY(20px);
+}
+
+#btn-card1.btn-primary.active, #btn-card2.btn-primary.active {
+  background-color: #bc6bff;
+  color: white;
+}
+
+.card {
+  position: absolute;
+  width: 542.169px;
+  height: 397.59px;
+  flex-shrink: 0;
+  transition: transform 800ms ease-in-out, z-index 0s;
+  overflow: hidden;
+}
+
+#card1 {
+  text-align: center;
+  background-color: white;
+  z-index: 2;
+  border-radius: 20px;
+}
+
+#card2 {
+  text-align: center;
+  background-color: white;
+  z-index: 1;
+  border-radius: 20px;
+  transform: translateX(20px) translateY(20px);
+}
+
+button.btn.btn-primary#btn-card1:active, button.btn.btn-primary#btn-card1:focus, button.btn.btn-primary#btn-card2:active, button.btn.btn-primary#btn-card2:focus {
+  background-color: #9215FA !important;
+  color: white !important;
+}
+
+button.btn.btn-primary#btn-card1:hover, button.btn.btn-primary#btn-card2:hover {
+  background-color: #9215FA !important;
+  color: white !important;
+}
+

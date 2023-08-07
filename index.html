@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en" style="background:#28231C;">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Memoria Web</title>
+    <link rel="canonical" href="https://www.memoriaweb.com/">
+    <meta property="og:url" content="https://www.memoriaweb.com/">
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "WebSite",
+            "name": "Memoria Web",
+            "url": "https://www.memoriaweb.com"
+        }
+    </script>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:400,600,800&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sora:400,600,800&amp;display=swap">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/card-1.css">
+    <link rel="stylesheet" href="assets/css/footer-1.css">
+    <link rel="stylesheet" href="assets/css/Navbar-Centered-Links-icons-1.css">
+    <link rel="stylesheet" href="assets/css/styles-1.css">
+<script src="https://www.gstatic.com/firebasejs/9.1.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.1.2/firebase-auth.js"></script>
+</head>
+
+<body style="margin-right:80px;margin-left:80px;background:#28231C;">
+    <div class="container d-xl-flex mx-auto justify-content-xl-start" style="padding-left:0px;padding-right:0px;margin-left:0px;margin-top:20px;height:104px;width:1280px;">
+        <div class="text-nowrap font-weight-bold"><img src="assets/img/memoria%20web.svg">
+            <p style="font-size:24px;font-family:Inter, sans-serif;letter-spacing:-0.06rem;color:white;margin-bottom:0px;line-height:29px;">Memoria Web</p>
+        </div>
+    </div>
+    <div class="container d-xl-flex mx-auto" style="width:1280px;height:460px;margin-right:0px;margin-left:0px;padding-right:0px;padding-left:0px;margin-top:46px;">
+        <div class="row d-xl-flex" style="margin-right:0px;margin-left:0px;">
+            <div class="col-md-6" style="padding-left:0px;margin-right:0px;width:600px;padding-right:0px;">
+                <h1 class="display-1 font-weight-bold text-left" style="font-size:96px;color:white;letter-spacing:-0.3rem;font-family:inter;line-height:116px;">Time-Travel <span style="color:#F8F32B;">Online</span></h1>
+                <p>Memoria Web is your gateway to the digital past. With our advanced archival technology, we breathe new life into forgotten corners of the internet. Explore the evolution of online platforms, revisit old memories, or delve into initial website designs. We're not just preserving history; we're making it accessible. Step back in time with us today.</p>
+            </div>
+            <div class="col-md-6" style="margin-left:0px;width:600px;">
+                <div class="btn-group" role="group" style="padding-bottom:0px;padding-top:0px;margin-top:-84px;"><button class="btn btn-primary active" id="btn-card1" type="button" style="width:125px;height:42px;border-radius:40px 40px 40px 40px;margin-right:117px;margin-left:120px;font-family:sora;font-size:24px;letter-spacing:-1.44px;padding-top:0px;padding-bottom:0px;line-height:normal;border-width:0px;box-shadow:0px 4px 4px 2px rgb(0,0,0, 0.25);background:#530396;">Current</button><button class="btn btn-primary" id="btn-card2" type="button" style="border-radius:40px 40px 40px 40px;width:125px;height:42px;font-size:24px;line-height:normal;letter-spacing:-1.44px;font-family:sora;border-width:0px;box-shadow:0px 4px 4px 2px rgb(0,0,0, 0.25);background:#530396;">-10 Years</button></div>
+                <div class="card" id="card1" style="box-shadow:4px 4px 14px rgba(0,0,0,0.25);"><img class="card-img-top w-100 d-block card-img-top w-100 card-img-top w-100" src="assets/img/Google-10yr.png" alt="Google 10 year image" style="width:100%;height:100%;object-fit:contain;"></div>
+                <div class="card" id="card2" style="box-shadow:4px 4px 14px rgba(0,0,0,0.25);"><img class="card-img-top w-100 d-block card-img-top w-100 card-img-top w-100" src="assets/img/Google-Today.png"></div>
+                <div class="form-group d-xl-flex justify-content-xl-start InputGroup">
+                    <div class="input-group" style="border-radius:0px;border-width:1px;">
+                        <div class="input-group-prepend" style="border-top-left-radius:14px;border-bottom-left-radius:14px;"></div><input class="form-control form-control form-control form-control" type="url" id="urlInput" placeholder="Enter the URL you’d like to see" style="border-radius: 0x;background: #3B3B3B;border-top-left-radius: 14px;border-bottom-left-radius: 14px;color: white;text-align: center;border-width: 1px;border-color: #525252;font-size: 16px;">
+                        <div class="input-group-append"><button class="btn btn-primary" id="searchButton" type="button" style="border-top-right-radius:14px;border-bottom-right-radius:14px;background:#3B3B3B;width:48px;border-width:1px;border-color:#525252;"><i class="fas fa-search"></i></button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container" style="width:1280px;height:912px;margin-top:328px;">
+        <div class="row">
+            <div class="col-md-6" style="padding-right:0px;padding-left:0px;">
+                <h2 style="color:rgb(255,255,255);font-family:sora;font-size:48px;line-height:125%;letter-spacing:-0.06rem;">Relive Nostalgia</h2>
+                <p><br>Dive back into your favorite online communities. Experience nostalgia at your fingertips!</p>
+            </div>
+            <div class="col-md-6 d-xl-flex justify-content-xl-center" style="padding-right:0px;padding-left:40px;width:600px;height:300px;"><img style="width:300px;height:300px;" src="assets/img/soon-3.png"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 d-xl-flex justify-content-xl-center" style="padding-right:40px;padding-left:0px;width:600px;height:300px;"><img style="width:300px;height:300px;margin-top:-30px;" src="assets/img/page-not-found-error-404-2.png"></div>
+            <div class="col-md-6" style="padding-right:0px;padding-left:0px;">
+                <h2 style="color:rgb(255,255,255);font-family:sora;font-size:48px;line-height:125%;letter-spacing:-0.06rem;"><br>Unlock Lost Information</h2>
+                <p><br>Break through dead links to unearth data from extinct websites. Conquer your research with ease!</p>
+            </div>
+        </div>
+        <div class="row" style="margin-top:20px;">
+            <div class="col-md-6" style="padding-right:0px;padding-left:0px;">
+                <h2 style="color:rgb(255,255,255);font-family:sora;font-size:48px;line-height:125%;letter-spacing:-0.06rem;">Study Evolution for Software Engineers</h2>
+                <p><br>Leverage our archives to understand system evolution. Inform your development strategies with past insights! Dive into Memoria Web, where the past powers the future!</p>
+            </div>
+            <div class="col-md-6 d-xl-flex justify-content-xl-center" style="padding-right:0px;padding-left:40px;width:600px;height:300px;"><img style="width:300px;height:300px;" src="assets/img/researchers.png"></div>
+        </div>
+    </div>
+    <div class="container" style="padding-left:0px;padding-right:0px;height:175px;width:896px;padding-top:0px;margin-top:25px;">
+        <div class="row d-xl-flex">
+            <div class="col" style="padding-right:0px;padding-left:0px;text-align:center;">
+                <h2 class="d-xl-flex mx-auto justify-content-xl-center" style="color:rgb(255,255,255);font-family:sora;font-size:48px;line-height:125%;letter-spacing:-2.88px;text-align:center;width:863px;">Millions run on Memoria Web every day</h2>
+                <h3 class="d-xl-flex justify-content-xl-center"><br>Powering the world’s best teams, from next-generation <br>students to established enterprises.</h3><a href="#" style="color:#a947ff;letter-spacing:-1.44px;">Read customer stories <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewbox="0 0 16 16" class="bi bi-arrow-right"><path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path></svg></a>
+            </div>
+        </div>
+    </div>
+    <div class="container text-center" style="width:1160px;height:456px;margin-top:120px;padding-right:0px;padding-left:0px;"><img src="assets/img/Company%20Logos/Florida_Atlantic_Owls_logo%201.png" style="margin-left:132px;"><img src="assets/img/Company%20Logos/Apple_Logo.png" style="margin-right:60px;margin-left:60px;"><img src="assets/img/Company%20Logos/Florida_State_Seminoles_Alternate_Logo%201.png" style="margin-right:238px;"><img src="assets/img/Company%20Logos/Netflix_logo.png" style="margin-right:49px;"><img src="assets/img/Company%20Logos/UM_Logo.png"><img src="assets/img/Company%20Logos/Tesla_Logo.png" style="margin-left:49px;"></div>
+    <div class="container" style="width:1280px;height:1942px;margin-top:328px;">
+        <div class="row" style="height:622px;margin-bottom:40px;">
+            <div class="col-md-6" style="margin-left:0px;width:600px;">
+                <div class="btn-group" role="group" style="padding-bottom:0px;padding-top:0px;margin-top:-84px;"><button class="btn btn-primary active" id="btn-card-1" type="button" style="width:125px;height:42px;border-radius:40px 40px 40px 40px;margin-right:117px;margin-left:120px;font-family:sora;font-size:24px;letter-spacing:-1.44px;padding-top:0px;padding-bottom:0px;line-height:normal;border-width:0px;box-shadow:0px 4px 4px 2px rgb(0,0,0, 0.25);background:#530396;">-10 Years</button><button class="btn btn-primary" id="btn-card-2" type="button" style="border-radius:40px 40px 40px 40px;width:125px;height:42px;font-size:24px;line-height:normal;letter-spacing:-1.44px;font-family:sora;border-width:0px;box-shadow:0px 4px 4px 2px rgb(0,0,0, 0.25);background:#530396;">Today</button></div>
+                <div class="card" id="card-1" style="background-color:#28231C;border:none;"><img class="card-img-top w-100 d-block card-img-top w-100 card-img-top w-100" src="assets/img/B&A%20Photos/Youtube-Today.png" alt="Google 10 year image" style="width:100%;height:100%;object-fit:contain;"></div>
+                <div class="card" id="card-2" style="background-color:#28231C;border:none;"><img class="card-img-top w-100 d-block card-img-top w-100 card-img-top w-100" src="assets/img/B&A%20Photos/Youtube-10yr.png"></div>
+                <div class="form-group d-xl-flex justify-content-xl-start InputGroup">
+                    <div class="input-group" style="border-radius:0px;border-width:1px;">
+                        <div class="input-group-prepend" style="border-top-left-radius:14px;border-bottom-left-radius:14px;"></div><input class="form-control form-control form-control form-control" type="url" id="urlInput-1" placeholder="https://www.youtube.com" style="border-radius: 0x;background: #3B3B3B;border-top-left-radius: 14px;border-bottom-left-radius: 14px;color: white;text-align: center;border-width: 1px;border-color: #525252;font-size: 24px;" disabled="">
+                        <div class="input-group-append"><button class="btn btn-primary" id="searchButton-1" type="button" style="border-top-right-radius:14px;border-bottom-right-radius:14px;background:#3B3B3B;width:48px;border-width:1px;border-color:#525252;"><i class="fas fa-search"></i></button></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 d-xl-flex m-auto justify-content-xl-center" style="padding-right:0px;padding-left:40px;width:600px;"><img src="assets/img/Company%20Logos/Youtube_Logo.png"></div>
+        </div>
+        <div class="row" style="height:622px;margin-bottom:40px;">
+            <div class="col-md-6 d-xl-flex m-auto justify-content-xl-center" style="padding-right:0px;padding-left:40px;width:600px;"><img src="assets/img/Company%20Logos/Nike_Logo.png"></div>
+            <div class="col-md-6" style="margin-left:0px;width:600px;">
+                <div class="btn-group" role="group" style="padding-bottom:0px;padding-top:0px;margin-top:-84px;"><button class="btn btn-primary active" id="btn-card-3" type="button" style="width:125px;height:42px;border-radius:40px 40px 40px 40px;margin-right:117px;margin-left:120px;font-family:sora;font-size:24px;letter-spacing:-1.44px;padding-top:0px;padding-bottom:0px;line-height:normal;border-width:0px;box-shadow:0px 4px 4px 2px rgb(0,0,0, 0.25);background:#530396;">-10 Years</button><button class="btn btn-primary" id="btn-card-4" type="button" style="border-radius:40px 40px 40px 40px;width:125px;height:42px;font-size:24px;line-height:normal;letter-spacing:-1.44px;font-family:sora;border-width:0px;box-shadow:0px 4px 4px 2px rgb(0,0,0, 0.25);background:#530396;">Today</button></div>
+                <div class="card" id="card-3" style="background-color:#28231C;border:none;"><img class="card-img-top w-100 d-block card-img-top w-100 card-img-top w-100" src="assets/img/B&A%20Photos/Youtube-Today.png" alt="Google 10 year image" style="width:100%;height:100%;object-fit:contain;"></div>
+                <div class="card" id="card-4" style="background-color:#28231C;border:none;"><img class="card-img-top w-100 d-block card-img-top w-100 card-img-top w-100" src="assets/img/B&A%20Photos/nike.png"></div>
+                <div class="form-group d-xl-flex justify-content-xl-start InputGroup">
+                    <div class="input-group" style="border-radius:0px;border-width:1px;">
+                        <div class="input-group-prepend" style="border-top-left-radius:14px;border-bottom-left-radius:14px;"></div><input class="form-control form-control form-control form-control" type="url" id="urlInput-2" placeholder="https://www.nike.com" style="border-radius:0x;background:#3B3B3B;border-top-left-radius:14px;border-bottom-left-radius:14px;color:white;text-align:center;border-width:1px;border-color:#525252;font-size:24px;" disabled="">
+                        <div class="input-group-append"><button class="btn btn-primary" id="searchButton-2" type="button" style="border-top-right-radius:14px;border-bottom-right-radius:14px;background:#3B3B3B;width:48px;border-width:1px;border-color:#525252;"><i class="fas fa-search"></i></button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" style="height:622px;margin-bottom:40px;">
+            <div class="col-md-6" style="margin-left:0px;width:600px;">
+                <div class="btn-group" role="group" style="padding-bottom:0px;padding-top:0px;margin-top:-84px;"><button class="btn btn-primary active" id="btn-card-5" type="button" style="width:125px;height:42px;border-radius:40px 40px 40px 40px;margin-right:117px;margin-left:120px;font-family:sora;font-size:24px;letter-spacing:-1.44px;padding-top:0px;padding-bottom:0px;line-height:normal;border-width:0px;box-shadow:0px 4px 4px 2px rgb(0,0,0, 0.25);background:#530396;">-10 Years</button><button class="btn btn-primary" id="btn-card-6" type="button" style="border-radius:40px 40px 40px 40px;width:125px;height:42px;font-size:24px;line-height:normal;letter-spacing:-1.44px;font-family:sora;border-width:0px;box-shadow:0px 4px 4px 2px rgb(0,0,0, 0.25);background:#530396;">Today</button></div>
+                <div class="card" id="card-5" style="background-color:#28231C;border:none;"><img class="card-img-top w-100 d-block card-img-top w-100 card-img-top w-100" src="assets/img/B&A%20Photos/Youtube-Today.png" alt="Google 10 year image" style="width:100%;height:100%;object-fit:contain;"></div>
+                <div class="card" id="card-6" style="background-color:#28231C;border:none;"><img class="card-img-top w-100 d-block card-img-top w-100 card-img-top w-100" src="assets/img/B&A%20Photos/facebook.png"></div>
+                <div class="form-group d-xl-flex justify-content-xl-start InputGroup">
+                    <div class="input-group" style="border-radius:0px;border-width:1px;">
+                        <div class="input-group-prepend" style="border-top-left-radius:14px;border-bottom-left-radius:14px;"></div><input class="form-control form-control form-control form-control" type="url" id="urlInput-3" placeholder="https://www.facebook.com" style="border-radius: 0x;background: #3B3B3B;border-top-left-radius: 14px;border-bottom-left-radius: 14px;color: white;text-align: center;border-width: 1px;border-color: #525252;font-size: 24px;" disabled="">
+                        <div class="input-group-append"><button class="btn btn-primary" id="searchButton-3" type="button" style="border-top-right-radius:14px;border-bottom-right-radius:14px;background:#3B3B3B;width:48px;border-width:1px;border-color:#525252;"><i class="fas fa-search"></i></button></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 d-xl-flex m-auto justify-content-xl-center" style="padding-right:0px;padding-left:40px;width:600px;"><img src="assets/img/Company%20Logos/Facebook_Logo.png"></div>
+        </div>
+    </div>
+    <div class="container" style="width:1000px;height:1249px;">
+        <div class="container" style="width:1000px;height:auto;">
+            <h1 class="d-xl-flex m-auto justify-content-xl-center" style="color:rgb(255,255,255);text-align:center;font-size:60px;line-height:76px;letter-spacing:-0.06rem;font-family:sora;font-weight:600;width:275px;height:80px;">FAQs</h1>
+            <div role="tablist" id="accordion-1" style="margin-top:50px;border-style:none;border-color:rgba(33,37,41,0);transform:scale(1);opacity:1;backdrop-filter:opacity(1);">
+                <div class="card" style="height:auto;width:1000px;background:rgba(255,255,255,0);border-radius:10px;border-top-left-radius:0;border-top-right-radius:0;border-bottom-right-radius:40px;border-bottom-left-radius:40px;border-width:0px;border-bottom-width:0px;border-bottom-color:#9215ff;">
+                    <div class="card-header" role="tab" style="border-width:0px;border-top-left-radius:0px;border-top-right-radius:0px;border-bottom-right-radius:0px;background:rgba(0,0,0,0);">
+                        <h5 class="mb-0" style="width:1000px;"><a data-toggle="collapse" aria-expanded="true" aria-controls="accordion-1 .item-1" href="#accordion-1 .item-1" style="width: 1000px;padding-left: 0;">What is this platform all about?</a></h5>
+                    </div>
+                    <div class="collapse show item-1" role="tabpanel" data-parent="#accordion-1">
+                        <div class="card-body">
+                            <p class="card-text" style="width:700px;">This is your gateway to the past of the World Wide Web. Discover forgotten web pages, early versions of social media sites, and nostalgic blog posts - we've captured it all.</p>
+                        </div>
+                    </div>
+                    <div class="card-header" role="tab" style="border-width:0px;border-top-left-radius:0px;border-top-right-radius:0px;border-bottom-right-radius:0px;background:rgba(0,0,0,0);">
+                        <h5 class="mb-0" style="width:1000px;"><a data-toggle="collapse" aria-expanded="false" aria-controls="accordion-1 .item-2" href="#accordion-1 .item-2" style="width:1000px;">Is this service just for tech enthusiasts?</a></h5>
+                    </div>
+                    <div class="collapse item-2" role="tabpanel" data-parent="#accordion-1">
+                        <div class="card-body">
+                            <p class="card-text" style="width:700px;">Absolutely not! Our platform is designed for everyone - researchers, nostalgic surfers, or simply curious individuals. Its simplicity and ease of use make it an intriguing journey into the digital past for anyone.</p>
+                        </div>
+                    </div>
+                    <div class="card-header" role="tab" style="border-width:0px;border-top-left-radius:0px;border-top-right-radius:0px;border-bottom-right-radius:0px;background:rgba(0,0,0,0);">
+                        <h5 class="mb-0" style="width:1000px;"><a data-toggle="collapse" aria-expanded="false" aria-controls="accordion-1 .item-3" href="#accordion-1 .item-3" style="width:1000px;">Why would I need to use this platform?</a></h5>
+                    </div>
+                    <div class="collapse item-3" role="tabpanel" data-parent="#accordion-1">
+                        <div class="card-body">
+                            <p class="card-text" style="width:700px;">Whether you're a researcher exploring the evolution of the web, a software engineer studying older frameworks, or just a curious person interested in internet history, this is the perfect tool for you.</p>
+                        </div>
+                    </div>
+                    <div class="card-header" role="tab" style="border-width:0px;border-top-left-radius:0px;border-top-right-radius:0px;border-bottom-right-radius:0px;background:rgba(0,0,0,0);">
+                        <h5 class="mb-0" style="width:1000px;"><a data-toggle="collapse" aria-expanded="false" aria-controls="accordion-1 .item-4" href="#accordion-1 .item-4" style="width:1000px;">What's the purpose of the search bar?</a></h5>
+                    </div>
+                    <div class="collapse item-4" role="tabpanel" data-parent="#accordion-1">
+                        <div class="card-body">
+                            <p class="card-text" style="width:700px;">It's your portal to the past. Just type in the website or content you're interested in, and be ready to experience it as it was years ago.</p>
+                        </div>
+                    </div>
+                    <div class="card-header" role="tab" style="border-width:0px;border-top-left-radius:0px;border-top-right-radius:0px;border-bottom-right-radius:0px;background:rgba(0,0,0,0);">
+                        <h5 class="mb-0" style="width:1000px;"><a data-toggle="collapse" aria-expanded="false" aria-controls="accordion-1 .item-5" href="#accordion-1 .item-5" style="width:1000px;">How do I get started?</a></h5>
+                    </div>
+                    <div class="collapse item-5" role="tabpanel" data-parent="#accordion-1">
+                        <div class="card-body">
+                            <p class="card-text" style="width:700px;">Getting started couldn't be simpler. Navigate to the search bar, enter your desired website or online content, and you're all set to explore.</p>
+                        </div>
+                    </div>
+                    <div class="card-header" role="tab" style="border-width:0px;border-top-left-radius:0px;border-top-right-radius:0px;border-bottom-right-radius:0px;background:rgba(0,0,0,0);">
+                        <h5 class="mb-0" style="width:1000px;"><a data-toggle="collapse" aria-expanded="false" aria-controls="accordion-1 .item-6" href="#accordion-1 .item-6" style="width:1000px;">What kind of content can I find?</a></h5>
+                    </div>
+                    <div class="collapse item-6" role="tabpanel" data-parent="#accordion-1">
+                        <div class="card-body">
+                            <p class="card-text" style="width:700px;">You'll find everything from the origins of social media and forgotten websites to retro blog posts and more. It's like a digital time capsule of the World Wide Web.</p>
+                        </div>
+                    </div>
+                    <div class="card-header" role="tab" style="border-width:0px;border-top-left-radius:0px;border-top-right-radius:0px;border-bottom-right-radius:0px;background:rgba(0,0,0,0);">
+                        <h5 class="mb-0" style="width:1000px;"><a data-toggle="collapse" aria-expanded="false" aria-controls="accordion-1 .item-7" href="#accordion-1 .item-7" style="width:1000px;">What are some things I can do here?</a></h5>
+                    </div>
+                    <div class="collapse item-7" role="tabpanel" data-parent="#accordion-1">
+                        <div class="card-body">
+                            <p class="card-text" style="width:700px;">Revisit your favorite old online community boards, dive into the content of a website that no longer exists, or study the trends in website design over time. The possibilities are nearly endless.</p>
+                        </div>
+                    </div>
+                    <div class="card-header" role="tab" style="border-width:0px;border-top-left-radius:0px;border-top-right-radius:0px;border-bottom-right-radius:0px;background:rgba(0,0,0,0);">
+                        <h5 class="mb-0" style="width:1000px;"><a data-toggle="collapse" aria-expanded="false" aria-controls="accordion-1 .item-8" href="#accordion-1 .item-8" style="width:1000px;">How is this platform different from similar services?</a></h5>
+                    </div>
+                    <div class="collapse item-8" role="tabpanel" data-parent="#accordion-1">
+                        <div class="card-body">
+                            <p class="card-text" style="width:700px;">While there may be other platforms offering similar services, our focus is on simplicity and ease of use. The user experience is streamlined, making it easy to navigate the most significant sites and their historical changes.</p>
+                        </div>
+                    </div>
+                    <div class="card-header" role="tab" style="border-width:0px;border-top-left-radius:0px;border-top-right-radius:0px;border-bottom-right-radius:0px;background:rgba(0,0,0,0);">
+                        <h5 class="mb-0" style="width:1000px;"><a data-toggle="collapse" aria-expanded="false" aria-controls="accordion-1 .item-9" href="#accordion-1 .item-9" style="width:1000px;">Isn't this platform too simple?</a></h5>
+                    </div>
+                    <div class="collapse item-9" role="tabpanel" data-parent="#accordion-1">
+                        <div class="card-body">
+                            <p class="card-text" style="width:700px;">Simplicity is our strength. No endless scrolling or complex features to get in your way. Simply enter your search and let the adventure begin.</p>
+                        </div>
+                    </div>
+                    <div class="card-header" role="tab" style="border-width:0px;border-top-left-radius:0px;border-top-right-radius:0px;border-bottom-right-radius:0px;background:rgba(0,0,0,0);">
+                        <h5 class="mb-0" style="width:1000px;"><a data-toggle="collapse" aria-expanded="false" aria-controls="accordion-1 .item-10" href="#accordion-1 .item-10" style="width:1000px;">Does it work on all browsers?</a></h5>
+                    </div>
+                    <div class="collapse item-10" role="tabpanel" data-parent="#accordion-1">
+                        <div class="card-body">
+                            <p class="card-text" style="width:700px;">Indeed, it does! Our platform is designed to be compatible with all modern browsers, including Google Chrome, Mozilla Firefox, Oracle Opera, and Apple Safari. You're free to enjoy your journey into the past on any platform you prefer.</p>
+                        </div>
+                    </div>
+                    <div class="card-header" role="tab" style="border-width:0px;border-top-left-radius:0px;border-top-right-radius:0px;border-bottom-right-radius:0px;background:rgba(0,0,0,0);">
+                        <h5 class="mb-0" style="width:1000px;"><a data-toggle="collapse" aria-expanded="false" aria-controls="accordion-1 .item-11" href="#accordion-1 .item-11" style="width:1000px;">What inspired the creation of this platform?</a></h5>
+                    </div>
+                    <div class="collapse item-11" role="tabpanel" data-parent="#accordion-1">
+                        <div class="card-body">
+                            <p class="card-text" style="width:700px;">The internet is an ever-evolving landscape, and its history is often forgotten. Our service was born out of a desire to preserve and showcase this rich history, serving as a resource for both learning and nostalgia.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="text-white bg-dark d-xl-flex m-auto justify-content-xl-center" style="height:430px;background:rgba(0,123,255,0);border-bottom-color:rgba(255,255,255,0);">
+        <div class="container py-4 py-lg-5" style="background:#191922;">
+            <div class="row justify-content-center">
+                <div class="col-lg-3 col-xl-2 text-center text-lg-left item social">
+                    <div class="font-weight-bold d-flex flex-column align-items-center order-first justify-content-xl-start align-items-xl-start mb-2"><img src="assets/img/memoria%20web.svg"><span style="font-size:24px;font-family:inter;letter-spacing:-0.06rem;">Memoria Web</span></div>
+                </div>
+                <div class="col-sm-4 col-md-3 col-lg-4 col-xl-4 text-center text-lg-left d-flex flex-column item">
+                    <h5 class="font-weight-bold">Get in touch</h5>
+                    <ul class="list-unstyled">
+                        <li><a class="text-white" href="#" style="font-size:24px;font-family:sora;font-weight:200;">Contact Us<br>admin@memoriaweb.info</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-4 col-md-3 col-lg-2 col-xl-3 text-center text-lg-left d-flex flex-column item">
+                    <h5 class="font-weight-bold">Support</h5>
+                    <ul class="list-unstyled">
+                        <li><a class="text-white" href="#">Help Center</a></li>
+                        <li><a class="text-white" href="#">Status</a></li>
+                        <li><a class="text-white" href="#">What's New</a></li>
+                        <li><a class="text-white" href="#">Product Roadmap</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-4 col-md-3 col-lg-3 text-center text-lg-left d-flex flex-column item">
+                    <h5 class="font-weight-bold">Company</h5>
+                    <ul class="list-unstyled">
+                        <li><a class="text-white" href="#">About</a></li>
+                        <li><a class="text-white" href="#">Careers</a></li>
+                        <li><a class="text-white" href="#">Accessibility</a></li>
+                        <li><a class="text-white" href="#">Press</a></li>
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="d-flex justify-content-between pt-3" style="background:var(--bs-gray-100);">
+                <p class="mb-0">Copyright © 2023 Memoria Web, LLC </p>
+                <ul class="list-inline text-white-50 mb-0">
+                    <li class="list-inline-item list-inline-item"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewbox="0 0 16 16" class="bi bi-facebook"><path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"></path></svg></li>
+                    <li class="list-inline-item list-inline-item"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewbox="0 0 16 16" class="bi bi-twitter"><path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"></path></svg></li>
+                    <li class="list-inline-item list-inline-item"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewbox="0 0 16 16" class="bi bi-instagram"><path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"></path></svg></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <nav class="mx-auto navbar navbar-light navbar-expand-md fixed-bottom py-3" style="margin-top:0px;padding-bottom:0px;margin-bottom:20px;width:900px;background:#000000;border-radius:40px;height:80px;">
+        <div class="container-fluid"><a class="navbar-brand d-flex align-items-center" href="#" style="width:80px;height:66px;border-radius:40px;background:rgba(98,98,116,0.5);padding-left:0px;padding-right:0px;margin-left:-24px;"><span class="d-flex justify-content-center align-items-center bs-icon-lg bs-icon-rounded bs-icon-primary mr-2 bs-icon" style="background:rgba(0,123,255,0);width:80px;height:70px;margin-right:24px;"><svg class="bi bi-search" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewbox="0 0 16 16"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"></path></svg></span></a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-3"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-3" style="color:rgb(255,255,255);">
+                <ul class="nav d-xl-flex flex-fill mx-auto justify-content-xl-center">
+                    <li class="nav-item" style="margin-right:0px;padding-right:90px;"><a class="nav-link active" href="#" style="color:rgba(255,255,255,0.9);font-family:sora;font-size:24px;">Benefits</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" style="color:rgb(255,255,255);">FAQs</a></li>
+                </ul><a class="btn btn-primary d-xl-flex justify-content-xl-center align-items-xl-center" role="button" id="google-login-button" href="#" style="width: 100px;height: 66px;background: rgba(98,98,116,0.5);border-radius: 40px;margin-left: 0px;padding-left: 22px;padding-right: 21px;margin-right: 5px;border-width: 0px;">Sign In</a><a class="btn btn-primary d-xl-flex justify-content-xl-center align-items-xl-center" role="button" id="google-login-button" href="#" style="width:100px;height:66px;background:rgba(98,98,116,0.5);border-radius:40px;margin-left:0px;padding-left:22px;padding-right:21px;margin-right:-22px;border-width:0px;">Sign Up</a>
+            </div>
+        </div>
+        <div id="signinModal" class="modal">
+            <div class="modal-content"><span class="close">×</span>
+                <h2>Sign In</h2>
+                <form id="login-form"><label for="signin-email">Email:</label><input type="email" id="signin-email" name="email" required=""><br><br><label for="signin-password">Password:</label><input type="password" id="signin-password" name="password" required=""><br><br><button type="submit">Sign In</button></form>
+            </div>
+        </div>
+        <div id="signupModal" class="modal">
+            <div class="modal-content"><span class="close">×</span>
+                <h2>Sign Up</h2>
+                <form id="signup-form"><label for="signup-email">Email:</label><input type="email" id="signup-email" name="email" required=""><br><br><label for="signup-password">Password:</label><input type="password" id="signup-password" name="password" required=""><br><br><button type="submit">Sign Up</button></form>
+            </div>
+        </div>
+    </nav>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/auth-1.js"></script>
+    <script src="assets/js/CardAnimation-1.js"></script>
+    <script src="assets/js/config-1.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/your_script-1.js"></script>
+</body>
+
+</html>
